@@ -1,0 +1,33 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?1581901a467e0876b0f52a9604052477") format("truetype"),
+url("./flaticon.woff?1581901a467e0876b0f52a9604052477") format("woff"),
+url("./flaticon.woff2?1581901a467e0876b0f52a9604052477") format("woff2"),
+url("./flaticon.eot?1581901a467e0876b0f52a9604052477#iefix") format("embedded-opentype"),
+url("./flaticon.svg?1581901a467e0876b0f52a9604052477#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "call": "\f101",
+    "phone-call": "\f102",
+);
+
+.flaticon-call:before {
+    content: map-get($flaticon-map, "call");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon-map, "phone-call");
+}
